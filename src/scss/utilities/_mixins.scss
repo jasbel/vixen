@@ -1,0 +1,94 @@
+
+/// Background imagen
+//@include bg-image("logo.png", center, no-repeat, cover)
+@mixin bg-image($bg-image, $bg-position: center center, $bg-repeat: no-repeat, $bg-size: cover) {
+  $bg-image: "../images/" + $bg-image;
+  background: url($bg-image) $bg-repeat $bg-position;
+  background-size: $bg-size;
+}
+
+/// Font Tipografy
+/// @include fonts(console, medium, black, normal, normal)
+@mixin fonts($font-family, $font-size: medium, $font-color: black, $font-weight: normal, $font-style: normal) {
+  @if($font-color != "" ) {
+    color: $font-color;
+  }
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-size: $font-size;
+  font-style: $font-style;
+}
+
+/// Flexbox center
+@mixin flexcen($justify: center, $align: center) {
+  display: flex;
+  align-items: $align;
+  justify-content: $justify;
+}
+
+///font size responsive all screen
+///font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width])));
+///font-size: calc(14px + (26 - 14) * ((100vw - 300px) / (1600 - 300))) ;
+@mixin font-responsive($f-max, $f-min: $font-size-min, $w-max: $width-screen-max, $w-min: $width-screen-min ) {
+// @mixin font-responsive($f-max, $f-min: 16, $w-max: 1400 , $w-min: 500 ) {
+  $f-min-px: $f-min * 1px;
+  $w-min-px:  $w-min * 1px ;
+  font-size:calc( #{$f-min-px} + (#{$f-max} - #{$f-min}) * ((100vw - #{$w-min-px}) / (#{$w-max} - #{$w-min})));
+
+}
+
+//mixin border circle
+// w width
+// h height
+// c color
+// br: 1=top-left / 2=top-right / 3=bottom-right / 4=bottom-left
+@mixin circler($w, $h, $bc, $br) {
+  position: relative;
+  &::before,
+  &::after {
+    content: "";
+    width: $w;
+    height: $h;
+    position: absolute;
+    background-color: $bc;
+    @if $br == 1 {
+      top: 0;
+      left: 0;
+      border-radius: 0 0 100% 0;
+    }
+    @if $br == 2 {
+      top: 0;
+      right: 0;
+      border-radius: 0 0 0 100%;
+    }
+    @if $br == 3 {
+      bottom: 0;
+      right: 0;
+      border-radius: 100% 0 0 0;
+    }
+    @if $br == 4 {
+      bottom: 0;
+      left: 0;
+      border-radius: 0 100% 0 0;
+    }
+    z-index: -9999;
+    border: none;
+  }
+  &::after {
+    background-color: $white;
+    @if $br == 1 {
+      border-radius: 100% 0 0 0;
+    }
+    @if $br == 2 {
+      border-radius: 0 100% 0 0;
+    }
+    @if $br == 3 {
+      border-radius: 0 0 100% 0;
+    }
+    @if $br == 4 {
+      border-radius: 0 0 0 100%;
+    }
+    z-index: -9998;
+    border: none;
+  }
+}

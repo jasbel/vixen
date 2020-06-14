@@ -1,0 +1,19 @@
+/// Fonts
+/// @type List
+$font-avenir: "Avenir" !default;
+$font-futura: "Futura";
+$font-lato: "Lato",
+sans-serif !default;
+/// Colors
+/// @type Color
+$color-pink: #e81f76;
+$color-light: #fff;
+$color-dark: #000;
+$color-silver: #f9f9f9;
+/// Container's maximum width
+/// @type Length
+$max-width: 1413px !default;
+///Width screen for font in px
+$width-screen-max: 1600;
+$width-screen-min: 575;
+$font-size-min: 16;

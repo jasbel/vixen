@@ -1,0 +1,65 @@
+.icon-blue {
+  $size: 98px;
+  width: $size;
+  height: $size;
+  border-radius: $size / 2;
+  background-color: $light-blue;
+  @include flexcen();
+  @media (min-width: 768px) {
+    $size: 136px;
+    width: $size;
+    height: $size;
+    border-radius: $size / 2;
+  }
+}
+
+.icon-green {
+  $size: 46px;
+  width: $size;
+  height: $size;
+  border: 3px solid $light-green;
+  border-radius: $size / 2;
+  font-size: $size / 2;
+  color: $light-green;
+  @include flexcen();
+  @media (min-width: 768px) {
+  }
+  // $size: 65px;
+  // width: $size;
+  // height: $size;
+  // border: 3px solid $light-green;
+  // border-radius: $size / 2;
+  // font-size: $size / 2;
+  // color: $light-green;
+  // @include flexcen();
+  // @media (max-width: 576px) {
+  //   $size: 27px;
+  //   width: $size;
+  //   height: $size;
+  //   border-radius: $size / 2;
+  //   font-size: $size / 2;
+  // }
+}
+
+.icon-silver {
+  $size: 44px;
+  width: $size;
+  height: $size;
+  background-color: $light-grey;
+  border-radius: $size / 2;
+  font-size: $size / 3 + 2px;
+  color: $white;
+  @include flexcen();
+  @media (max-width: 576px) {
+    $size: 22px;
+    width: $size;
+    height: $size;
+    border-radius: $size / 2 + 2px;
+    font-size: $size / 3;
+  }
+}
+
+.icon-grey {
+  font-size: 16px;
+  color: $grey;
+}

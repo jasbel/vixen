@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
+@font-face {
+    font-family: 'Futura';
+    src: url('fonts/Futura-Bold.woff2') format('woff2'), url('fonts/Futura-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Roman';
+    src: url('fonts/AvenirLTStd-Roman.woff2') format('woff2'), url('fonts/AvenirLTStd-Roman.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Light';
+    src: url('fonts/AvenirLTStd-Light.woff2') format('woff2'), url('fonts/AvenirLTStd-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Avenir LT Book';
+    src: url('fonts/AvenirLTStd-Book.woff2') format('woff2'), url('fonts/AvenirLTStd-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: $font-avenir;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    margin: 0 auto;
+    padding: 0;
+}
+
+h2,
+h3,
+h4 {
+    text-transform: uppercase;
+}
+
+h2 {
+    // @include fonts($font-avenir, 45px,"", 900);
+    @include fonts($font-futura,
+    60px,
+    "",
+    900);
+    @include font-responsive(60,
+    50);
+}
+
+h3 {
+    @include fonts($font-futura,
+    34px,
+    "",
+    900);
+    @include font-responsive(34,
+    30);
+}
+
+h4 {
+    // @include fonts($font-avenir, 18.88px,"", 900);
+    @include fonts($font-futura,
+    18.88px,
+    "",
+    900);
+    @include font-responsive(18.88);
+}
+
+h5 {
+    @include fonts($font-avenir,
+    38px,
+    "",
+    700);
+    @include font-responsive(38,
+    32);
+}
+
+p {
+    @include fonts($font-avenir,
+    19px,
+    "",
+    600);
+    @include font-responsive(19);
+    line-height: 35px;
+}
+
+li {
+    list-style-type: none;
+    @include fonts($font-avenir,
+    18px,
+    $color-light,
+    bold);
+    @include font-responsive(18);
+}
+
+a {
+    text-decoration: none;
+    transition: color 0.23s ease-in-out;
+    @include fonts($font-avenir,
+    17px,
+    $color-light,
+    900);
+    @include font-responsive(17);
+    &:hover {
+        text-decoration: none;
+        color: $color-pink;
+    }
+}
+
+input[type=submit] {
+    @include fonts($font-avenir,
+    17px,
+    $color-light,
+    900);
+    @include font-responsive(17);
+}
+
+.container {
+    padding: 0 15px;
+    max-width: $max-width;
+    &-medium {
+        max-width: 900px;
+    }
+}
+
+.container-medium {
+    max-width: 960px;
+    padding: 0 15px;
+}
+
+.btn {
+    @include flexcen();
+}
+
+.btn-pink {
+    min-height: 56px;
+    max-width: 225px;
+    border-radius: 0;
+    background-color: $color-pink;
+    color: $color-light;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 900;
+    transition: transform 0.23s ease, background-color 0.23s ease-in-out;
+    &:hover {
+        transform: translateY(-5px);
+        background-color: $color-dark;
+        ;
+        color: $color-light;
+    }
+}
+
+.number-dashed {
+    text-decoration: line-through;
+}
+
+.color-pink {
+    color: $color-pink;
+}
+
+//background in rhomboid
+.bg-clip {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    // -webkit-clip-path: polygon(100% 0, 100% 71.2%, 0 100%, 0 28.8%);
+    // -webkit-clip-path: url("#clipping");
+    // clip-path: polygon(100% 0, 100% 71.2%, 0 100%, 0 28.8%);
+}
+
+.member-locations {
+    position: relative;
+}
+
+.bg-clip-custom {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    z-index: -1;
+    background-image: url("../images/pink-line.png");
+    background-repeat: repeat-x;
+    background-size: 100%;
+    @media (max-width: 767.98px) {
+        background-size: cover;
+        min-height: 500px;
+        height: auto;
+    }
+    @media (min-width: 1600px) {
+        background-size: 100% 80%;
+        max-height: 700px;
+        // height: auto;
+    }
+}
