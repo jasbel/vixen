@@ -12687,28 +12687,28 @@ html {
 
 @font-face {
   font-family: 'Futura';
-  src: url("fonts/Futura-Bold.woff2") format("woff2"), url("fonts/Futura-Bold.woff") format("woff");
+  src: url("fonts/Futura-Bold.woff2") format("woff2"), url("../fonts/Futura-Bold.woff") format("woff");
   font-weight: bold;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir LT Roman';
-  src: url("fonts/AvenirLTStd-Roman.woff2") format("woff2"), url("fonts/AvenirLTStd-Roman.woff") format("woff");
+  font-family: 'Avenir';
+  src: url("fonts/AvenirLTStd-Roman.woff2") format("woff2"), url("../fonts/AvenirLTStd-Roman.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir LT Light';
-  src: url("fonts/AvenirLTStd-Light.woff2") format("woff2"), url("fonts/AvenirLTStd-Light.woff") format("woff");
+  font-family: 'Avenir';
+  src: url("fonts/AvenirLTStd-Light.woff2") format("woff2"), url("../fonts/AvenirLTStd-Light.woff") format("woff");
   font-weight: 300;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Avenir LT Book';
-  src: url("fonts/AvenirLTStd-Book.woff2") format("woff2"), url("fonts/AvenirLTStd-Book.woff") format("woff");
+  font-family: 'Avenir';
+  src: url("fonts/AvenirLTStd-Book.woff2") format("woff2"), url("../fonts/AvenirLTStd-Book.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
